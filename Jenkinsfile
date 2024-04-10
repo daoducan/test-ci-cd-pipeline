@@ -12,9 +12,6 @@ pipeline {
                 cleanWs()
             }
         }
-    }
-
-    stages {
         stage("Checkout from SCM") {
             steps {
                 git branch 'main', credentialsId: 'github', url 'https://github.com/daoducan/test-ci-cd-pipeline'
